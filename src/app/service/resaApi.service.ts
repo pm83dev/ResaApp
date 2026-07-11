@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, signal } from '@angular/core';
 import { catchError, of } from 'rxjs';
-import { QuoteModel } from '../models/model';
+import { QuoteModel, DataQuotesModel } from '../models/model';
+
 
 /**
  * Servizio per la gestione delle chiamate API relative alle citazioni.
@@ -16,6 +17,8 @@ export class ResaApiService {
    * Inizialmente impostato a null.
    */
   public quote = signal<QuoteModel | null>(null);
+
+  public allQuotes = signal<DataQuotesModel>({ quotes: [] });
 
   /**
    * Segnale che contiene il messaggio di errore, se presente.
@@ -52,6 +55,7 @@ export class ResaApiService {
     );
   }
 
+  /** Endpoint per ottenere una citazione specifica tramite ID */
   getQuoteById(id: number) {
     return this.http.get<QuoteModel>(`https://localhost:7261/api/quote/get-quote-by-id/${id}`).pipe(
       catchError((error) => {
@@ -61,6 +65,31 @@ export class ResaApiService {
       }),
     );
   }
+
+  /** Endpoint per le citazioni casuali */
+  private readonly RANDOM_QUOTE_URL = 'https://localhost:7261/api/quote/get-random-quote';
+
+  getRandomQuoteFromApi() {
+    return this.http.get<QuoteModel>(this.RANDOM_QUOTE_URL).pipe(
+      catchError((error) => {
+        console.error('Errore API:', error);
+        this.errorMessage.set('Impossibile caricare la citazione casuale. Controlla la connessione.');
+        return of(null);
+      }),
+    );
+  }
+
+  /** Endpoint per ottenere tutte le citazioni */
+  getAllQuotesApi() {
+    return this.http.get<DataQuotesModel>('https://localhost:7261/api/quote/get-all-quotes').pipe(
+      catchError((error) => {
+        console.error('Errore API:', error);
+        this.errorMessage.set('Impossibile caricare le citazioni. Controlla la connessione.');
+        return of({ quotes: [] });
+      }),
+    );
+  }
+
 
   /**
    * Metodo pubblico per avviare il caricamento della citazione.
@@ -73,6 +102,26 @@ export class ResaApiService {
     // Iscrizione alla chiamata API
     this.getQuoteFromApi().subscribe((data) => {
       // Se i dati sono stati ricevuti correttamente (non null), aggiorna il segnale della citazione
+      if (data) {
+        this.quote.set(data);
+      }
+    });
+  }
+
+  /** Metodo pubblico per avviare il caricamento di tutte le citazioni. */
+  loadAllQuotes() {
+    this.errorMessage.set(null);
+    this.getAllQuotesApi().subscribe((data) => {
+      if (data) {
+        this.allQuotes.set(data);
+      }
+    });
+  }
+
+  /** Metodo pubblico per caricare una citazione casuale */
+  loadRandomQuote() {
+    this.errorMessage.set(null);
+    this.getRandomQuoteFromApi().subscribe((data) => {
       if (data) {
         this.quote.set(data);
       }

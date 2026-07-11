@@ -10,3 +10,7 @@ export interface QuoteModel {
   author: string;
   category: string;
 }
+
+export interface DataQuotesModel {
+  quotes: QuoteModel[];
+}
