@@ -1,59 +1,106 @@
-# ResaFrontend
+# ResaApp
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.6.
+A full-stack quote management application with .NET 10 backend and Angular 21 frontend.
 
-## Development server
+## Architecture
 
-To start a local development server, run:
+```
+ResaApp/
+├── ResaBackend/          # .NET 10 ASP.NET Core Web API
+│   ├── Controllers/      # REST API endpoints
+│   ├── Models/           # Entity models
+│   ├── Dto/              # Data Transfer Objects
+│   └── Program.cs        # Application entry point
+├── ResaFrontend/         # Angular 21 standalone components
+│   ├── src/app/          # Application source code
+│   │   ├── components/   # UI components (home, navbar)
+│   │   ├── service/      # API services
+│   │   └── models/       # TypeScript interfaces
+│   └── package.json      # Dependencies
+├── resaApp.sln           # Visual Studio solution
+└── start-all.ps1         # Launch both apps script
+```
 
-```bash
+## Features
+
+- **Quote Management**: CRUD operations for managing quotes
+- **Random Quote**: Generate random quotes with a single click
+- **Bootstrap 5 UI**: Modern responsive interface
+- **Signal-based State**: Angular Signals for reactive data management
+
+## Backend API Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/api/quote/get-quote` | Get first quote |
+| GET | `/api/quote/get-random-quote` | Get random quote |
+| GET | `/api/quote/get-all-quotes` | Get all quotes |
+| POST | `/api/quote/add-quote` | Add new quote |
+| PUT | `/api/quote/update-quote/{id}` | Update existing quote |
+| DELETE | `/api/quote/delete-quote/{id}` | Delete quote by ID |
+
+## Prerequisites
+
+- [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)
+- [Node.js 20+](https://nodejs.org/)
+- [Angular CLI](https://angular.io/cli)
+
+## Quick Start
+
+### Option 1: Use the launch script (recommended)
+
+```powershell
+.\start-all.ps1
+```
+
+This will start both the backend and frontend automatically.
+
+### Option 2: Manual startup
+
+**Backend:**
+```powershell
+cd ResaBackend
+dotnet run
+```
+
+The API will be available at `https://localhost:7261`
+
+**Frontend:**
+```powershell
+cd ResaFrontend
+npm install
+ng serve --open
+```
+
+The app will open at `http://localhost:4200`
+
+## Development
+
+### Backend (.NET 10)
+
+```powershell
+cd ResaBackend
+dotnet restore
+dotnet build
+dotnet run
+```
+
+### Frontend (Angular 21)
+
+```powershell
+cd ResaFrontend
+npm install
 ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
 ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
 ng test
 ```
 
-## Running end-to-end tests
+## Tech Stack
 
-For end-to-end (e2e) testing, run:
+- **Backend**: .NET 10.0, ASP.NET Core Web API, in-memory storage
+- **Frontend**: Angular 21.2.6, TypeScript, Bootstrap 5.3.0, Bootstrap Icons 1.11.0
+- **State Management**: Angular Signals (signal() API)
 
-```bash
-ng e2e
-```
+## License
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+MIT
