@@ -1,0 +1,42 @@
+<nav class="navbar">
+  <div class="navbar-brand">
+    <h2>Resa App</h2>
+  </div>
+  <div class="navbar-links">
+    <a href="/" class="nav-link">Home</a>
+    <a href="/about" class="nav-link">About</a>
+    <a href="/contact" class="nav-link">Contatti</a>
+  </div>
+</nav>
+
+<style>
+  .navbar {
+    background-color: #333;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar-brand h2 {
+    color: white;
+    margin: 0;
+  }
+
+  .navbar-links {
+    display: flex;
+    gap: 20px;
+  }
+
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+
+  .nav-link:hover {
+    background-color: #555;
+  }
+</style>

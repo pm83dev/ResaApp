@@ -1,0 +1,26 @@
+# Build outputs
+**/bin/
+**/obj/
+**/*.user
+**/*.suo
+**/*.cache
+**/*.log
+
+# Node.js
+node_modules/
+**/dist/
+**/.angular/
+**/wwwroot/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# ASP.NET Core publish
+publish/
