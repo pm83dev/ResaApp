@@ -1,0 +1,10 @@
+/* Override personalizzati per la pagina Home */
+.card-title.fst-italic {
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .card-body.p-5 {
+    padding: 1.5rem !important;
+  }
+}
