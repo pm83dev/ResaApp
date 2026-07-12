@@ -42,3 +42,13 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
+
+# .NET backend
+**/bin/
+**/obj/
+**/wwwroot/
+
+# ASP.NET Core publish
+**/*.publishproj
+**/.vs/
+**/.vscode/config.json

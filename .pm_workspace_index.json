@@ -1,0 +1,460 @@
+{
+  "builtAt": "2026-07-12T10:14:36.873Z",
+  "symbols": [
+    {
+      "name": "ResaApiService",
+      "kind": "service",
+      "file": "src/app/service/resaApi.service.ts",
+      "line": 14,
+      "preview": "export class ResaApiService {"
+    },
+    {
+      "name": "quote",
+      "kind": "signal",
+      "file": "src/app/service/resaApi.service.ts",
+      "line": 19,
+      "preview": "public quote = signal<QuoteModel | null>(null);"
+    },
+    {
+      "name": "allQuotes",
+      "kind": "signal",
+      "file": "src/app/service/resaApi.service.ts",
+      "line": 21,
+      "preview": "public allQuotes = signal<DataQuotesModel>({ quotes: [] });"
+    },
+    {
+      "name": "errorMessage",
+      "kind": "signal",
+      "file": "src/app/service/resaApi.service.ts",
+      "line": 27,
+      "preview": "public errorMessage = signal<string | null>(null);"
+    },
+    {
+      "name": "constructor",
+      "kind": "method",
+      "file": "src/app/service/resaApi.service.ts",
+      "line": 33,
+      "preview": "constructor(private readonly http: HttpClient) {}"
+    },
+    {
+      "name": "getQuoteFromApi",
+      "kind": "method",
+      "file": "src/app/service/resaApi.service.ts",
+      "line": 43,
+      "preview": "getQuoteFromApi() {"
+    },
+    {
+      "name": "getQuoteById",
+      "kind": "method",
+      "file": "src/app/service/resaApi.service.ts",
+      "line": 59,
+      "preview": "getQuoteById(id: number) {"
+    },
+    {
+      "name": "getRandomQuoteFromApi",
+      "kind": "method",
+      "file": "src/app/service/resaApi.service.ts",
+      "line": 72,
+      "preview": "getRandomQuoteFromApi() {"
+    },
+    {
+      "name": "getAllQuotesApi",
+      "kind": "method",
+      "file": "src/app/service/resaApi.service.ts",
+      "line": 83,
+      "preview": "getAllQuotesApi() {"
+    },
+    {
+      "name": "loadQuote",
+      "kind": "method",
+      "file": "src/app/service/resaApi.service.ts",
+      "line": 98,
+      "preview": "loadQuote() {"
+    },
+    {
+      "name": "if",
+      "kind": "method",
+      "file": "src/app/service/resaApi.service.ts",
+      "line": 105,
+      "preview": "if (data) {"
+    },
+    {
+      "name": "loadAllQuotes",
+      "kind": "method",
+      "file": "src/app/service/resaApi.service.ts",
+      "line": 112,
+      "preview": "loadAllQuotes() {"
+    },
+    {
+      "name": "if",
+      "kind": "method",
+      "file": "src/app/service/resaApi.service.ts",
+      "line": 115,
+      "preview": "if (data) {"
+    },
+    {
+      "name": "loadRandomQuote",
+      "kind": "method",
+      "file": "src/app/service/resaApi.service.ts",
+      "line": 122,
+      "preview": "loadRandomQuote() {"
+    },
+    {
+      "name": "if",
+      "kind": "method",
+      "file": "src/app/service/resaApi.service.ts",
+      "line": 125,
+      "preview": "if (data) {"
+    },
+    {
+      "name": "DataModel",
+      "kind": "interface",
+      "file": "src/app/models/model.ts",
+      "line": 1,
+      "preview": "export interface DataModel {"
+    },
+    {
+      "name": "QuoteModel",
+      "kind": "interface",
+      "file": "src/app/models/model.ts",
+      "line": 6,
+      "preview": "export interface QuoteModel {"
+    },
+    {
+      "name": "DataQuotesModel",
+      "kind": "interface",
+      "file": "src/app/models/model.ts",
+      "line": 14,
+      "preview": "export interface DataQuotesModel {"
+    },
+    {
+      "name": "Navbar",
+      "kind": "component",
+      "file": "src/app/components/navbar/navbar.ts",
+      "line": 9,
+      "preview": "export class Navbar {}"
+    },
+    {
+      "name": "App",
+      "kind": "component",
+      "file": "src/app/app.ts",
+      "line": 13,
+      "preview": "export class App implements OnInit {"
+    },
+    {
+      "name": "title",
+      "kind": "signal",
+      "file": "src/app/app.ts",
+      "line": 14,
+      "preview": "title = signal('Resa App - Citazioni e Riflessioni');"
+    },
+    {
+      "name": "ngOnInit",
+      "kind": "method",
+      "file": "src/app/app.ts",
+      "line": 16,
+      "preview": "ngOnInit(): void {"
+    },
+    {
+      "name": "Home",
+      "kind": "component",
+      "file": "src/app/components/home/home.ts",
+      "line": 10,
+      "preview": "export class Home implements OnInit, OnDestroy {"
+    },
+    {
+      "name": "constructor",
+      "kind": "method",
+      "file": "src/app/components/home/home.ts",
+      "line": 14,
+      "preview": "constructor(public resaApiService: ResaApiService) {}"
+    },
+    {
+      "name": "ngOnInit",
+      "kind": "method",
+      "file": "src/app/components/home/home.ts",
+      "line": 16,
+      "preview": "ngOnInit(): void {"
+    },
+    {
+      "name": "getNewQuote",
+      "kind": "method",
+      "file": "src/app/components/home/home.ts",
+      "line": 22,
+      "preview": "getNewQuote(): void {"
+    },
+    {
+      "name": "ngOnDestroy",
+      "kind": "method",
+      "file": "src/app/components/home/home.ts",
+      "line": 27,
+      "preview": "ngOnDestroy(): void {"
+    },
+    {
+      "name": "App",
+      "kind": "component",
+      "file": "ResaFrontend/src/app/app.ts",
+      "line": 13,
+      "preview": "export class App implements OnInit {"
+    },
+    {
+      "name": "title",
+      "kind": "signal",
+      "file": "ResaFrontend/src/app/app.ts",
+      "line": 14,
+      "preview": "title = signal('Resa App - Citazioni e Riflessioni');"
+    },
+    {
+      "name": "ngOnInit",
+      "kind": "method",
+      "file": "ResaFrontend/src/app/app.ts",
+      "line": 16,
+      "preview": "ngOnInit(): void {"
+    },
+    {
+      "name": "ResaApiService",
+      "kind": "service",
+      "file": "ResaFrontend/src/app/service/resaApi.service.ts",
+      "line": 14,
+      "preview": "export class ResaApiService {"
+    },
+    {
+      "name": "quote",
+      "kind": "signal",
+      "file": "ResaFrontend/src/app/service/resaApi.service.ts",
+      "line": 19,
+      "preview": "public quote = signal<QuoteModel | null>(null);"
+    },
+    {
+      "name": "allQuotes",
+      "kind": "signal",
+      "file": "ResaFrontend/src/app/service/resaApi.service.ts",
+      "line": 21,
+      "preview": "public allQuotes = signal<DataQuotesModel>({ quotes: [] });"
+    },
+    {
+      "name": "errorMessage",
+      "kind": "signal",
+      "file": "ResaFrontend/src/app/service/resaApi.service.ts",
+      "line": 27,
+      "preview": "public errorMessage = signal<string | null>(null);"
+    },
+    {
+      "name": "constructor",
+      "kind": "method",
+      "file": "ResaFrontend/src/app/service/resaApi.service.ts",
+      "line": 33,
+      "preview": "constructor(private readonly http: HttpClient) {}"
+    },
+    {
+      "name": "getQuoteFromApi",
+      "kind": "method",
+      "file": "ResaFrontend/src/app/service/resaApi.service.ts",
+      "line": 43,
+      "preview": "getQuoteFromApi() {"
+    },
+    {
+      "name": "getQuoteById",
+      "kind": "method",
+      "file": "ResaFrontend/src/app/service/resaApi.service.ts",
+      "line": 59,
+      "preview": "getQuoteById(id: number) {"
+    },
+    {
+      "name": "getRandomQuoteFromApi",
+      "kind": "method",
+      "file": "ResaFrontend/src/app/service/resaApi.service.ts",
+      "line": 72,
+      "preview": "getRandomQuoteFromApi() {"
+    },
+    {
+      "name": "getAllQuotesApi",
+      "kind": "method",
+      "file": "ResaFrontend/src/app/service/resaApi.service.ts",
+      "line": 83,
+      "preview": "getAllQuotesApi() {"
+    },
+    {
+      "name": "loadQuote",
+      "kind": "method",
+      "file": "ResaFrontend/src/app/service/resaApi.service.ts",
+      "line": 98,
+      "preview": "loadQuote() {"
+    },
+    {
+      "name": "if",
+      "kind": "method",
+      "file": "ResaFrontend/src/app/service/resaApi.service.ts",
+      "line": 105,
+      "preview": "if (data) {"
+    },
+    {
+      "name": "loadAllQuotes",
+      "kind": "method",
+      "file": "ResaFrontend/src/app/service/resaApi.service.ts",
+      "line": 112,
+      "preview": "loadAllQuotes() {"
+    },
+    {
+      "name": "if",
+      "kind": "method",
+      "file": "ResaFrontend/src/app/service/resaApi.service.ts",
+      "line": 115,
+      "preview": "if (data) {"
+    },
+    {
+      "name": "loadRandomQuote",
+      "kind": "method",
+      "file": "ResaFrontend/src/app/service/resaApi.service.ts",
+      "line": 122,
+      "preview": "loadRandomQuote() {"
+    },
+    {
+      "name": "if",
+      "kind": "method",
+      "file": "ResaFrontend/src/app/service/resaApi.service.ts",
+      "line": 125,
+      "preview": "if (data) {"
+    },
+    {
+      "name": "DataModel",
+      "kind": "interface",
+      "file": "ResaFrontend/src/app/models/model.ts",
+      "line": 1,
+      "preview": "export interface DataModel {"
+    },
+    {
+      "name": "QuoteModel",
+      "kind": "interface",
+      "file": "ResaFrontend/src/app/models/model.ts",
+      "line": 6,
+      "preview": "export interface QuoteModel {"
+    },
+    {
+      "name": "DataQuotesModel",
+      "kind": "interface",
+      "file": "ResaFrontend/src/app/models/model.ts",
+      "line": 14,
+      "preview": "export interface DataQuotesModel {"
+    },
+    {
+      "name": "Navbar",
+      "kind": "component",
+      "file": "ResaFrontend/src/app/components/navbar/navbar.ts",
+      "line": 9,
+      "preview": "export class Navbar {}"
+    },
+    {
+      "name": "Home",
+      "kind": "component",
+      "file": "ResaFrontend/src/app/components/home/home.ts",
+      "line": 10,
+      "preview": "export class Home implements OnInit, OnDestroy {"
+    },
+    {
+      "name": "constructor",
+      "kind": "method",
+      "file": "ResaFrontend/src/app/components/home/home.ts",
+      "line": 14,
+      "preview": "constructor(public resaApiService: ResaApiService) {}"
+    },
+    {
+      "name": "ngOnInit",
+      "kind": "method",
+      "file": "ResaFrontend/src/app/components/home/home.ts",
+      "line": 16,
+      "preview": "ngOnInit(): void {"
+    },
+    {
+      "name": "getNewQuote",
+      "kind": "method",
+      "file": "ResaFrontend/src/app/components/home/home.ts",
+      "line": 22,
+      "preview": "getNewQuote(): void {"
+    },
+    {
+      "name": "ngOnDestroy",
+      "kind": "method",
+      "file": "ResaFrontend/src/app/components/home/home.ts",
+      "line": 27,
+      "preview": "ngOnDestroy(): void {"
+    },
+    {
+      "name": "QuoteModel",
+      "kind": "class",
+      "file": "ResaBackend/Models/Quote.cs",
+      "line": 3,
+      "preview": "public class QuoteModel"
+    },
+    {
+      "name": "QuoteDto",
+      "kind": "class",
+      "file": "ResaBackend/Dto/QuoteDto.cs",
+      "line": 3,
+      "preview": "public class QuoteDto"
+    },
+    {
+      "name": "DataQuotesDto",
+      "kind": "class",
+      "file": "ResaBackend/Dto/QuoteDto.cs",
+      "line": 12,
+      "preview": "public class DataQuotesDto"
+    },
+    {
+      "name": "QuoteController",
+      "kind": "class",
+      "file": "ResaBackend/Controllers/QuoteControllers.cs",
+      "line": 9,
+      "preview": "public class QuoteController : ControllerBase"
+    },
+    {
+      "name": "Get",
+      "kind": "method",
+      "file": "ResaBackend/Controllers/QuoteControllers.cs",
+      "line": 28,
+      "preview": "public IActionResult Get()"
+    },
+    {
+      "name": "GetAll",
+      "kind": "method",
+      "file": "ResaBackend/Controllers/QuoteControllers.cs",
+      "line": 45,
+      "preview": "public IActionResult GetAll()"
+    },
+    {
+      "name": "GetById",
+      "kind": "method",
+      "file": "ResaBackend/Controllers/QuoteControllers.cs",
+      "line": 66,
+      "preview": "public IActionResult GetById(int id)"
+    },
+    {
+      "name": "GetRandom",
+      "kind": "method",
+      "file": "ResaBackend/Controllers/QuoteControllers.cs",
+      "line": 88,
+      "preview": "public IActionResult GetRandom()"
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "file": "ResaBackend/Controllers/QuoteControllers.cs",
+      "line": 107,
+      "preview": "public IActionResult Add([FromBody] QuoteModel newQuote)"
+    },
+    {
+      "name": "Update",
+      "kind": "method",
+      "file": "ResaBackend/Controllers/QuoteControllers.cs",
+      "line": 126,
+      "preview": "public IActionResult Update(int id, [FromBody] QuoteModel updatedQuote)"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "file": "ResaBackend/Controllers/QuoteControllers.cs",
+      "line": 151,
+      "preview": "public IActionResult Delete(int id)"
+    }
+  ]
+}
